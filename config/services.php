@@ -30,4 +30,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'facebook' => [
+        'access_token' => env('FACEBOOK_ACCESS_TOKEN'),
+    ],
+
 ];
