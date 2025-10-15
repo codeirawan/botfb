@@ -10,11 +10,7 @@ use App\Http\Controllers\SettingController;
 
 Auth::routes(['verify' => true]);
 
-// Landing page -> Dashboard
-Route::get('/', [DashboardController::class, 'index'])->name('home');
-
 Route::middleware(['auth'])->group(function () {
-
     // Redirect old paths to dashboard
     Route::redirect('/dashboard', url('/'));
     Route::redirect('/password/confirm', url('/'));
